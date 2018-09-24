@@ -1,0 +1,16 @@
+body{
+	background-color: #d3d3d3;
+}
+.page-head{
+	text-align: center;
+	color: #000000;
+
+}
+.page-head h1{
+	font-size: 80px;
+}
+.page-head p{
+	font-size: 16px;
+	font-weight: 600;
+
+}
