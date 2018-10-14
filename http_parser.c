@@ -61,6 +61,9 @@ char* recognize_resource(const char* line){
 	
 	char* version = malloc(sizeof *version);
 	version = "HTTP/1.1";
+	char* alive = malloc(sizeof *alive);
+	alive = "Connection: keep-alive";
+
 	char* res_status =  malloc(sizeof *res_status);
 	char* cont_length = malloc(sizeof *cont_length);
 	char* response = malloc(sizeof *response);
@@ -110,14 +113,7 @@ char* recognize_resource(const char* line){
 
 
 		printf("starting to debug %s\n",response);
-		// strncat(response,version,strlen(version));
-		// strncat(response,res_status,strlen(res_status));
-		
-		// strncat(response,ext,strlen(ext));
-		
-		// strncat(response,cont_length,strlen(cont_length));
-		
-		// strncat(response,result,strlen(result));
+
 		sprintf(response,"%s%s%s%s%s", version, res_status, ext, cont_length, result);
 
 		
